@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>IMAGIX TICTACTOE</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<script type="text/javascript" src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/bootstrap.js" type="text/javascript"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130546438-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130546438-1');
+</script>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/index.js" type="text/javascript" ></script>
+</head>
+<body >
+<br/><br/>
+<div class="container container-responsive" style="border:0px solid yellow">
+
+	
+	<div class="col-lg-12">
+			<div class="de" style="font:29px verdana bold;color:red;" hidden ><center>Well! This is a draw!</center></div>
+			<div class="won1" style="font:29px verdana bold;color:red;" hidden ><center>Player 1 has won this bout!</center></div>
+			<div class="won2" style="font:29px verdana bold;color:red;" hidden ><center>Player 2 has won this bout!</center></div>
+			
+	</div>
+	<div class="col-lg-12">
+		<div class="col-lg-12"><b class="pull-right">Player 1's score:<span class="score1">0</span></B></div>
+		<br/>
+		<div class="col-lg-12"><b  class="pull-right">Player 2's score:<span class="score2">0</span></b></div>
+		<br/><br/>
+	</div>
+	
+	
+
+<div class="tr1 col-lg-offset-3 col-lg-2 col-md-4 col-xs-4" id="d1" onclick="puttheimage(this.id)"></div>
+<div class="tr2 col-lg-2 col-md-4 col-xs-4" id="d2" onclick="puttheimage(this.id)"></div>
+<div class="tr3 col-lg-2 col-md-4 col-xs-4" id="d3" onclick="puttheimage(this.id)"></div>
+
+<div class="mr1 col-lg-offset-3 col-lg-2 col-md-4 col-xs-4" id="d4" onclick="puttheimage(this.id)"></div>
+<div class="mr2 col-lg-2 col-md-4 col-xs-4" id="d5" onclick="puttheimage(this.id)"></div>
+<div class="mr3 col-lg-2 col-md-4 col-xs-4" id="d6" onclick="puttheimage(this.id)"></div>
+
+<div class="br1 col-lg-offset-3 col-lg-2 col-md-4 col-xs-4" id="d7" onclick="puttheimage(this.id)" ></div>
+<div class="br2 col-lg-2 col-md-4 col-xs-4" id="d8" onclick="puttheimage(this.id)"></div>
+<div class="br3 col-lg-2 col-md-4 col-xs-4" id="d9" onclick="puttheimage(this.id)"></div>
+
+<div class="col-lg-12"></div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<center><div class="col-lg-12 container container-responsive p1ss"  style="font:25px tahoma bold;letter-spacing:5px;">PLAYER 1 TO PLAY NOW</div>
+	<div class="col-lg-12 container container-responsive p2ss" HIDDEN style="font:25px tahoma bold;letter-spacing:5px;">PLAYER 2 TO PLAY NOW</div></center>
+
+</div>
+
+<a  data-toggle="modal" data-target="#myModal" data-backdrop="static" id="g1" hidden ></a> 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            
+            <h4 class="modal-title" id="myModalLabel">
+              Please Select which player is using X and 0.
+            </h4>
+         </div>
+         <div class="modal-body">
+             <span class="col-lg-4 col-xs-3">Player 1 : </span> <span class="col-lg-4 col-xs-4"><input type='radio' value="p1x" name="e1" id="sr1" onclick="playsel()"/>&nbsp;&nbsp;&nbsp;<img src="images/Untitled3.png" width="40" height="40" /></span><span class="col-lg-4 col-xs-4"><input type='radio' value="p1o" name="e1" id="sr2" onclick="playsel()" />&nbsp;&nbsp;&nbsp;<img src="images/Untitled-3.png" width="40" height="40" /></span>
+			  <br/><br/><br/><br/>
+			 <span class="col-lg-4 col-xs-3"> Player 2 : </span><span class="col-lg-4 col-xs-4"><input type='radio' value="p2x" name="e2" id="sr3" onclick="playsel2()" />&nbsp;&nbsp;&nbsp;<img src="images/Untitled3.png" width="40" height="40" /></span><span class="col-lg-4 col-xs-4"><input type='radio' value="p2o" name="e2" id="sr4"onclick="playsel2()"/>&nbsp;&nbsp;&nbsp;<img src="images/Untitled-3.png" width="40" height="40" /></span><br/><br/><br/>
+         </div>
+		&nbsp; &nbsp; <small hidden ><i>*Default for Player 1 is X.</i> </small>
+         <div class="modal-footer">
+             <button type="button" class="btn btn-primary" id="closem" data-dismiss="modal" style="display:none" >
+            </button>
+			<button type="button" class="btn btn-primary" type="button" onclick="juscheck()"
+               >Start Playing
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+</body>
+</html>
